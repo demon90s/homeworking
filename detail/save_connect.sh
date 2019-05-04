@@ -1,9 +1,12 @@
 #! /bin/bash
 
+source ./config.sh
+SSH="ssh -l ${agent_user} -p ${public_port} -i ${rsa_file} ${public_ip} "
+
 f_main()
 {
     while true ; do
-        ./connect_internal.sh echo "hi agent"
+        $SSH echo "hi agent"
         if [ "$?" = "0" ] ; then
             echo $(date)" save connect succ"
         else
