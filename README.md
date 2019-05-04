@@ -57,3 +57,30 @@ $ ./connect_internal.sh
 ```
 
 一切正常即可连接到内网机器。
+
+# What's more?
+
+为了更方便的ssh登录办公室的机器，可以为 ~/.ssh/config 文件添加一项配置，比如：
+
+```ssh
+Host office
+        HostName 118.24.3.169 # 公网ip
+        User diwen # 内网用户
+        IdentityFile ~/.ssh/Identity_dev
+        Port 7002 # 公网开放端口
+        ServerAliveInterval 30
+```
+
+然后可以这样登录：
+
+```bash
+$ ssh office
+```
+
+甚至可以使用X server打开GUI应用程序：
+
+```bash
+$ ssh -X office
+```
+
+然而慢的要死。
