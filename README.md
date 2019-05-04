@@ -46,8 +46,8 @@ $ ./internal_agent_start.sh
 3. 在云主机上执行：
 
 ```bash
-$ public_agent_start.sh
-$ save_connect_backend.sh
+$ ./public_agent_start.sh
+$ ./save_connect_backend.sh
 ```
 
 4. 在家里的电脑上执行：
