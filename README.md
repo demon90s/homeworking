@@ -66,7 +66,7 @@ $ ./connect_internal.sh
 
 ```ssh
 Host office
-        HostName 118.24.3.169 # 公网ip
+        HostName 66.66.66.66 # 公网ip
         User diwen # 内网用户
         IdentityFile ~/.ssh/Identity_dev
         Port 7002 # 公网开放端口
