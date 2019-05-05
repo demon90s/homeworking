@@ -34,6 +34,8 @@ $ cd homeworking
 然后修改配置文件：
 
 ```bash
+$ cp detail/config.sh.tmp detail/config.sh
+$ chmod +x detail/config.sh
 $ vim detail/config.sh
 ```
 
@@ -77,10 +79,21 @@ Host office
 $ ssh office
 ```
 
-甚至可以使用X server打开GUI应用程序：
+启用X server，从而可以打开GUI应用程序：
 
 ```bash
 $ ssh -X office
 ```
 
-然而慢的要死。
+挂载远程目录，从而在本地环境操作项目工程：
+
+```bash
+# format: ./mount_dir remote_dir local_dir
+$ ./mount_dir /home/diwen/workspace ~/mnt/workspace
+```
+
+取消挂载：
+
+```bash
+$ sudo umount ~/mnt/workspace
+```
