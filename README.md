@@ -24,10 +24,9 @@
 
 ## 步骤
 
-1. 在公司内网机器，云主机，家里电脑上，拉取版本库：
+1. 在公司内网机器，云主机，家里电脑上，拉取版本库，然后进入项目目录：
 
 ```bash
-$ git clone git@github.com:demon90s/homeworking.git
 $ cd homeworking
 ```
 
