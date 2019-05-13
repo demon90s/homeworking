@@ -43,6 +43,7 @@ $ vim detail/config.sh
 
 ```bash
 $ ./internal_agent_start.sh
+$ ./save_internal_agent_backend.sh
 ```
 
 3. 在云主机上执行：
