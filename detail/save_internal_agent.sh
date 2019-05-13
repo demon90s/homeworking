@@ -6,7 +6,7 @@ OLD_DIR=$(pwd)
 
 f_check_ssh()
 {
-	process=$(ps aux | grep -v grep | grep "ssh -fCNR ${agent_port}")
+	process=$(ps aux | grep -v grep | grep "ssh -fCNR ${agent_port}:")
 
 	if [ -n "$process" ]; then
 		return 0
@@ -20,7 +20,7 @@ f_main()
 	while true; do
 		echo -e $(date) "Begin check internal agent: \c"
 
-		if [ f_check_ssh ]; then
+		if f_check_ssh ; then
 			echo "agent alive"
 		else
 			echo "agent NOT alive, start it now"
