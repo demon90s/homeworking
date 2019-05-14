@@ -82,8 +82,25 @@ $ ssh office
 启用X server，从而可以打开GUI应用程序：
 
 ```bash
-$ ssh -X office
+$ ssh -X -C -c chacha20-poly1305@openssh.com office
 ```
+-X 表示启用X11，-C表示压缩数据，-c指示压缩算法，压缩的目的是提高传输速度。
+
+也可以直接加入ssh config:
+
+```bash
+Host office
+        HostName 66.66.66.66 # 公网ip
+        User diwen # 内网用户
+        IdentityFile ~/.ssh/Identity_dev
+        Port 7002 # 公网开放端口
+        ServerAliveInterval 30
+        ForwardX11 yes 
+        Compression yes 
+        Ciphers chacha20-poly1305@openssh.com
+```
+
+然后直接 ssh office
 
 挂载远程目录，从而在本地环境操作项目工程：
 
