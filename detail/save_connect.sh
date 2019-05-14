@@ -12,7 +12,6 @@ f_main()
             echo $(date)" save connect succ"
         else
             echo $(date) "save connect failed"
-            exit 1
         fi
         sleep 30
     done
