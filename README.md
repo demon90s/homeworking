@@ -62,6 +62,8 @@ $ ./connect_internal.sh
 
 # What's more?
 
+## ssh config
+
 为了更方便的ssh登录办公室的机器，可以为 ~/.ssh/config 文件添加一项配置，比如：
 
 ```ssh
@@ -78,6 +80,8 @@ Host office
 ```bash
 $ ssh office
 ```
+
+## X server
 
 启用X server，从而可以打开GUI应用程序：
 
@@ -102,15 +106,10 @@ Host office
 
 然后直接 ssh office
 
-挂载远程目录，从而在本地环境操作项目工程：
+## vscode remote ssh
 
-```bash
-# format: ./mount_dir remote_dir local_dir
-$ ./mount_dir /home/diwen/workspace ~/mnt/workspace
-```
+使用 vscode 的 Remote-SSH 插件，远程挂载一个内部机器的工作目录进行开发调试。
 
-取消挂载：
+ctrl+shift+p, 键入 remote-ssh 。
 
-```bash
-$ sudo umount ~/mnt/workspace
-```
+see what happened, Enjoy~
