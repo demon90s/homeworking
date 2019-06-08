@@ -22,6 +22,7 @@ f_main2()
 	$SSH "sleep 75686400000" # 100years
 }
 
+echo "PID: $$"
 #f_main $@
 
 f_main2 $@
