@@ -23,6 +23,6 @@ f_main2()
 }
 
 echo "PID: $$"
-#f_main $@
+f_main $@
 
-f_main2 $@
+#f_main2 $@
